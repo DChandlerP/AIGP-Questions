@@ -336,204 +336,346 @@ D. Treating any data used for AI training as exempt from GDPR.
 **Reasoning:**  
 GDPR requires a lawful basis for processing, transparency, respect for data subject rights, and adherence to principles like data minimization and purpose limitation. Indefinite storage, non-transparency, or exempting AI training from GDPR are non-compliant.
 
+---
 
-## Q21
-**Under GDPR, what is a 'Data Subject'?**
+## Q21 – GDPR data subject nuance
 
-- A. The topic that data is about.
-- B. An identified or identifiable natural person whose personal data is processed.
-- C. The person who collects data.
-- D. The organization that stores data.
+**Question:**  
+In an AI-powered personalization program, which individual is most clearly a *data subject* under GDPR?
+
+A. A software engineer who designs the recommendation algorithm but never appears in the training data.  
+B. An anonymized record where all direct and indirect identifiers have been irreversibly removed.  
+C. A logged-in customer whose browsing behavior is linked to a unique user ID that can be reconnected to their identity by the company.  
+D. A CEO who approves the AI initiative but never interacts with the system.
+
+**Correct answer:** C  
+
+**Reasoning:**  
+GDPR defines a data subject as an identified or identifiable natural person whose personal data is processed. When a user ID can be tied back to a real person, that user is a data subject, even if only internally.
 
 ---
 
-## Q22
-**What is 'Differential Privacy'?**
+## Q22 – Differential privacy tradeoffs
 
-- A. A method for keeping different types of data separate.
-- B. A technique that adds statistical noise to data to protect individual privacy while still allowing useful analysis.
-- C. A way to differentiate between private and public data.
-- D. A privacy law for different countries.
+**Question:**  
+A team applies differential privacy to an AI analytics pipeline. Which design decision best preserves both utility and privacy?
 
----
+A. Adding an extremely large amount of random noise to every individual record, regardless of query.  
+B. Calibrating noise to the sensitivity of each query and tracking a privacy budget over time as queries are issued.  
+C. Replacing all numeric values in the dataset with random numbers drawn uniformly between 0 and 1.  
+D. Only encrypting the database at rest without any added noise.
 
-## Q23
-**What is 'Federated Learning'?**
+**Correct answer:** B  
 
-- A. A learning method used by the federal government.
-- B. A machine learning approach where a model is trained across multiple decentralized devices holding local data samples, without sharing the raw data.
-- C. A way for different AI systems to learn from each other.
-- D. A centralized learning system for AI.
+**Reasoning:**  
+Differential privacy adds carefully calibrated noise tied to query sensitivity and uses a privacy budget to limit cumulative disclosures, balancing analytical usefulness with individual privacy protection.
 
 ---
 
-## Q24
-**What is a 'Deepfake'?**
+## Q23 – Federated learning vs central training
 
-- A. A very convincing lie.
-- B. AI-generated synthetic media, often video or audio, that realistically depicts someone saying or doing something they never did.
-- C. A fake deep learning model.
-- D. A deep fake internet connection.
+**Question:**  
+Which scenario best illustrates the privacy advantage of federated learning over traditional centralized training?
 
----
+A. Model gradients are computed locally on user devices, and only aggregated updates are sent to a central server, never the raw user data.  
+B. All user data is periodically uploaded to a central server, trained on, and then deleted after model training.  
+C. Only a small, random subset of user data is sent to the central server for training.  
+D. Data is fully centralized but pseudonymized before model training.
 
-## Q25
-**What is 'AI Fairness'?**
+**Correct answer:** A  
 
-- A. When all AI systems are given equal computing power.
-- B. The principle that AI systems should treat all individuals and groups equitably and without discrimination.
-- C. Ensuring AI systems are priced fairly.
-- D. When AI is used in fair competitions.
+**Reasoning:**  
+Federated learning keeps raw data on local devices and shares only model updates (gradients/parameters) for aggregation, reducing exposure of personal data relative to centralized collection.
 
 ---
 
-## Q26
-**What is the purpose of an 'AI Risk Assessment'?**
+## Q24 – Deepfake risk context
 
-- A. To assess the financial risk of investing in AI.
-- B. To identify, analyze, and evaluate the potential harms and negative impacts of an AI system before and during its deployment.
-- C. To determine if an AI system is too risky to be profitable.
-- D. To assess the risk that AI will replace human jobs.
+**Question:**  
+Which example most clearly demonstrates a high‑risk misuse of deepfake technology in a corporate or societal setting?
 
----
+A. Generating synthetic product photos for an internal design brainstorm.  
+B. Creating a satirical video clearly labeled as parody for a comedy show.  
+C. Producing a realistic video of a public official announcing a fake emergency, then distributing it on social media without disclosure.  
+D. Using generative models to upscale old training videos for employees.
 
-## Q27
-**What is 'Model Drift'?**
+**Correct answer:** C  
 
-- A. When a model is moved from one server to another.
-- B. The degradation of a model's predictive performance over time as the real-world data it operates on changes from the data it was trained on.
-- C. When a model's code drifts into a corrupt state.
-- D. When a model is not anchored to a specific task.
+**Reasoning:**  
+A realistic, undisclosed deepfake of a public official can trigger panic, misinformation, and public harm, illustrating a serious misuse. Transparent or internal uses pose lower societal risk.
 
 ---
 
-## Q28
-**What is 'Data Minimization' as a principle?**
+## Q25 – AI fairness tension
 
-- A. Making datasets as small as possible to save storage.
-- B. The principle that only the data that is necessary for a specific purpose should be collected and processed.
-- C. Minimizing the number of data sources used.
-- D. Reducing the cost of data storage.
+**Question:**  
+An employment-screening model passes overall accuracy tests but shows higher false-negative rates (rejecting qualified candidates) for one demographic group. Which action best aligns with AI fairness principles?
 
----
+A. Ignore the disparity because overall accuracy is acceptable.  
+B. Remove the sensitive attribute from the input features and assume the bias is resolved.  
+C. Investigate features and training data for proxies of the sensitive attribute, adjust the model or data, and re‑evaluate performance across groups.  
+D. Turn off the model for all applicants from that demographic group.
 
-## Q29
-**What is 'Informed Consent' in the context of data collection?**
+**Correct answer:** C  
 
-- A. When an AI system consents to being trained.
-- B. The process by which individuals are given clear information about how their data will be used and voluntarily agree to it.
-- C. Informing employees about data collection policies.
-- D. A form signed by data scientists before starting a project.
+**Reasoning:**  
+Fairness requires evaluating and mitigating group disparities, which often stem from proxies or skewed data. Removing the sensitive field alone rarely fixes bias, and ignoring or excluding groups undermines equity and legality.
 
 ---
 
-## Q30
-**What is 'AI Governance'?**
+## Q26 – AI risk assessment depth
 
-- A. When a government uses AI to manage its operations.
-- B. The framework of rules, policies, and processes that guide the responsible development and use of AI within an organization.
-- C. A new type of government powered by AI.
-- D. The government's department responsible for AI.
+**Question:**  
+Which activity would most appropriately be part of an AI risk assessment for a customer‑facing credit decision model?
 
----
+A. Comparing the model’s latency to a competitor’s model.  
+B. Identifying possible harms (e.g., unfair denials, regulatory breaches), estimating their likelihood and impact, and documenting controls to mitigate them.  
+C. Benchmarking cloud provider pricing for model hosting.  
+D. Counting how many data sources are integrated into the training pipeline.
 
-## Q31
-**What is a 'Chatbot'?**
+**Correct answer:** B  
 
-- A. A robot that can chat.
-- B. A software application designed to simulate human-like conversation, often using AI.
-- C. A type of social media bot.
-- D. A chat application for software developers.
+**Reasoning:**  
+An AI risk assessment focuses on identifying, analyzing, and prioritizing potential harms, then planning mitigation. Performance, cost, and integration concerns are relevant but not the core purpose of risk assessment.
 
 ---
 
-## Q32
-**What is 'Computer Vision'?**
+## Q27 – Model drift vs data drift
 
-- A. The ability of computers to see in the dark.
-- B. A field of AI that enables computers to interpret and understand visual information from images and videos.
-- C. The visual display of a computer monitor.
-- D. A type of software for video editing.
+**Question:**  
+Six months after deployment, a demand forecast model’s error steadily increases because customer behavior changed during a new economic downturn. What is the best description of this phenomenon?
 
----
+A. Hyperparameter instability.  
+B. Data drift leading to model drift, since the underlying data distribution has shifted away from the training conditions.  
+C. Overfitting to the training set due to excessive model complexity.  
+D. A temporary bug in the model’s implementation.
 
-## Q33
-**What is a 'Recommendation System'?**
+**Correct answer:** B  
 
-- A. A system for making business recommendations.
-- B. An AI system that suggests relevant items or content to users based on their past behavior and preferences.
-- C. A system for recommending employees for promotion.
-- D. A way for AI systems to recommend each other.
+**Reasoning:**  
+When real‑world data diverges from training data, distributions drift and model performance degrades over time, often described as data and model drift. Overfitting and bugs may cause issues but do not inherently require an external distribution shift.
 
 ---
 
-## Q34
-**What is 'Robotic Process Automation' (RPA)?**
+## Q28 – Data minimization nuance
 
-- A. The automation of robot assembly lines.
-- B. Technology that uses software robots to automate repetitive, rule-based digital tasks.
-- C. Teaching robots how to move.
-- D. A process for automating the manufacture of robots.
+**Question:**  
+A team designing an AI‑driven loyalty program proposes collecting detailed GPS data “in case it becomes useful later.” How should the data minimization principle guide this design?
 
----
+A. Collect the GPS data now and decide on a purpose later.  
+B. Collect only the coarse location data or alternative signals that are necessary for clearly defined use cases, avoiding highly granular tracking.  
+C. Avoid collecting any data about users whatsoever.  
+D. Collect all possible data but keep it encrypted indefinitely.
 
-## Q35
-**What is the 'Turing Test'?**
+**Correct answer:** B  
 
-- A. A test for measuring computing speed.
-- B. A test proposed by Alan Turing to determine if a machine can exhibit intelligent behavior indistinguishable from a human.
-- C. A way to test new AI programming languages.
-- D. A security test for AI systems.
+**Reasoning:**  
+Data minimization requires limiting collection to what is necessary for explicit purposes. Over‑collecting high‑granularity data with no concrete need conflicts with this principle, while total avoidance is not required when a legitimate purpose exists.
 
 ---
 
-## Q36
-**What is 'Artificial General Intelligence' (AGI)?**
+## Q29 – Informed consent in practice
 
-- A. A general-purpose AI that can do multiple tasks.
-- B. A hypothetical AI that can perform any intellectual task that a human being can.
-- C. An AI system used by general contractors.
-- D. A type of AI that is generally available to the public.
+**Question:**  
+Which consent mechanism best satisfies the spirit of *informed consent* for training a personalization model on user activity?
 
----
+A. A pre‑checked box buried in a long legal document that vaguely mentions “analytics.”  
+B. A short, clear notice that explains what data will be used, for what purposes, potential impacts, and provides an easy opt‑in and opt‑out mechanism.  
+C. A banner saying “By continuing to use this site, you agree to everything” with no further details.  
+D. No consent at all, because analytics are always considered “necessary.”
 
-## Q37
-**What is 'Narrow AI' (or Weak AI)?**
+**Correct answer:** B  
 
-- A. An AI system with limited computing power.
-- B. An AI system designed and trained for a specific, well-defined task.
-- C. An AI system that is less intelligent than a human.
-- D. An AI system used in small businesses.
+**Reasoning:**  
+Informed consent requires transparency, specificity, and genuine choice, including an easy way to opt in and later withdraw consent. Pre‑checked, vague, or absent consent undermines informed user control.
 
 ---
 
-## Q38
-**What does 'Privacy by Design' mean?**
+## Q30 – AI governance scope
 
-- A. Designing buildings with privacy in mind.
-- B. An approach to systems engineering that integrates privacy and data protection principles from the earliest stages of design.
-- C. A method for designing private AI systems.
-- D. A type of software licensing model.
+**Question:**  
+Which governance structure is most appropriate for a large organization deploying multiple AI systems across departments?
 
----
+A. Leaving each product team to define its own ad hoc AI policies independently.  
+B. Establishing an enterprise AI governance framework with shared policies, review boards, and standardized processes for lifecycle oversight.  
+C. Outsourcing all AI‑related decisions to an external vendor.  
+D. Relying solely on existing generic IT change‑management procedures.
 
-## Q39
-**What is an 'Adversarial Attack' on an AI system?**
+**Correct answer:** B  
 
-- A. A cyber attack on a company's AI department.
-- B. A technique where an attacker provides malicious input to cause an AI model to make mistakes or produce unintended outputs.
-- C. When two AI systems compete against each other.
-- D. A type of legal challenge against an AI company.
+**Reasoning:**  
+AI governance benefits from consistent, cross‑organizational policies, centralized oversight, and standardized controls tailored to AI’s specific risks. Fragmented, outsourced, or purely generic IT processes lack necessary alignment and depth.
 
 ---
 
-## Q40
-**What is 'Model Interpretability'?**
+## Q31 – Chatbot capability nuance
 
-- A. The ability to translate a model's outputs into different languages.
-- B. The degree to which a human can understand the cause of a decision made by a machine learning model.
-- C. How easy it is to use an AI model.
-- D. The ability of a model to interpret human commands.
+**Question:**  
+A bank deploys a chatbot that can answer FAQs, perform simple transactions, and escalate complex issues to humans. Which risk is *most* important to address in its design?
+
+A. Ensuring the chatbot maintains 100% uptime.  
+B. Preventing the chatbot from impersonating a human agent when decisions require human judgment or regulatory disclosures.  
+C. Guaranteeing that the chatbot never transfers calls to human agents.  
+D. Optimizing the chatbot to use as many emojis as possible.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+In regulated domains, chatbots must not mislead users about the nature of decisions and must escalate cases where human oversight or required disclosures are necessary, supporting trust and compliance.
+
+---
+
+## Q32 – Computer vision limitations
+
+**Question:**  
+A safety‑critical system uses computer vision to detect pedestrians. Which validation approach is most appropriate before deployment?
+
+A. Testing only on the clean, curated training dataset.  
+B. Evaluating performance across diverse real‑world conditions (lighting, weather, occlusions, demographics) and conducting scenario‑based safety tests.  
+C. Verifying that the model compiles without errors.  
+D. Running the model on a single benchmark dataset once.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Safety‑critical computer vision requires robust testing across varied real‑world scenarios and edge cases, not just training data or a single benchmark, to understand failure modes and residual risk.
+
+---
+
+## Q33 – Recommendation systems and feedback loops
+
+**Question:**  
+A content recommendation system learns from user clicks and tends to show increasingly narrow content to maximize engagement. Which risk is most relevant?
+
+A. The system might accidentally recommend content in languages it does not support.  
+B. Feedback loops can lead to filter bubbles, reinforcing existing preferences and potentially marginalizing diverse or minority content.  
+C. The system may run too quickly and overwhelm users with recommendations.  
+D. The system will inevitably generate synthetic user profiles.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Recommenders trained on engagement signals can create feedback loops that narrow user exposure and exacerbate polarization or unequal visibility, raising fairness and societal concerns.
+
+---
+
+## Q34 – RPA vs AI nuance
+
+**Question:**  
+Which task is the best fit for traditional Robotic Process Automation (RPA) rather than an AI model?
+
+A. Parsing unstructured legal documents to classify clauses.  
+B. Executing a fixed sequence of clicks and form entries in a legacy system based on structured input rules.  
+C. Predicting loan default probability from historical repayment data.  
+D. Generating natural language summaries of meeting transcripts.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+RPA shines for deterministic, rule‑based, UI‑level automation of repetitive tasks. Parsing unstructured text, predictive modeling, and language generation are better suited to AI/ML techniques.
+
+---
+
+## Q35 – Turing test limitations
+
+**Question:**  
+Why is passing a Turing test no longer considered a comprehensive benchmark for AI system quality?
+
+A. Because the Turing test only evaluates programming languages used.  
+B. Modern systems show that human‑like conversation can be achieved without true understanding, and the test ignores safety, reliability, fairness, and domain‑specific competence.  
+C. Because the Turing test requires extremely large datasets that are impractical.  
+D. Regulators have legally prohibited using the Turing test.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+The Turing test focuses narrowly on conversational indistinguishability, not on correctness, safety, or alignment. Contemporary chatbots demonstrate that fluent conversation can coexist with serious failures.
+
+---
+
+## Q36 – AGI vs narrow AI nuance
+
+**Question:**  
+Which capability most clearly distinguishes a hypothetical AGI from today’s narrow AI systems?
+
+A. The ability to process images and text at the same time.  
+B. General-purpose reasoning across many domains, learning new tasks with minimal data and transferring knowledge flexibly like a human.  
+C. Running on specialized accelerator hardware.  
+D. Generating human-like text responses to predefined prompts.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+AGI is typically defined as human‑level general intelligence: broad task competence, flexible transfer, and rapid adaptation. Multimodality, specialized hardware, or text generation alone do not imply AGI.
+
+---
+
+## Q37 – Narrow AI risk framing
+
+**Question:**  
+A medical imaging model is highly accurate at detecting one specific disease but cannot diagnose anything else. Which risk is most important for clinical deployment?
+
+A. That the model will spontaneously start diagnosing unrelated conditions.  
+B. That clinicians or patients may overgeneralize its capabilities and assume it can safely handle diagnoses it was not trained or validated for.  
+C. That the model will delete other patient data.  
+D. That the model will refuse to process any images.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Narrow AI excels at specific tasks but can be misused if stakeholders assume broader competence. Clear scoping and communication of intended use are critical to avoid unsafe overreliance.
+
+---
+
+## Q38 – Privacy by design in AI
+
+**Question:**  
+Which design choice best reflects *privacy by design* when building an AI‑driven analytics platform?
+
+A. Implementing privacy controls only after regulators start an investigation.  
+B. Embedding data minimization, access controls, logging, and privacy risk assessments into the system architecture from the earliest design stages.  
+C. Relying solely on external legal reviews after development is complete.  
+D. Collecting all user data first, then deleting whatever seems risky later.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Privacy by design means integrating privacy and data protection into architecture, defaults, and processes from the start, not retrofitting or treating it as a purely legal afterthought.
+
+---
+
+## Q39 – Adversarial attacks on models
+
+**Question:**  
+A vision model misclassifies a stop sign when a few carefully placed stickers are added to it, even though humans still see a stop sign. What does this illustrate?
+
+A. Model overfitting to the training dataset.  
+B. An adversarial example crafted to exploit the model’s decision boundary.  
+C. A data breach affecting the training data.  
+D. Concept drift due to seasonal changes.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Adversarial attacks create small, targeted perturbations that are often imperceptible to humans but cause a model to misclassify, exposing robustness and security weaknesses.
+
+---
+
+## Q40 – Model interpretability vs complexity
+
+**Question:**  
+A bank considers replacing an interpretable logistic regression model with a more accurate but opaque deep neural network for credit scoring. Which governance step is most appropriate?
+
+A. Deploy the neural network immediately because higher accuracy always justifies reduced interpretability.  
+B. Evaluate whether the loss of interpretability is acceptable given regulatory expectations, and consider techniques (e.g., SHAP, LIME) or hybrid models to preserve meaningful explanations.  
+C. Ignore interpretability concerns as long as the model is technically robust.  
+D. Keep both models running and randomly choose which output to use for each applicant.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+In high‑stakes, regulated domains, interpretability is often required for compliance and trust. Organizations should assess tradeoffs, use explainability tools or hybrid designs, and ensure decision processes remain understandable.
+
 
 ---
 
