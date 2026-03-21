@@ -1,206 +1,341 @@
-# AIGP-Questions
+## Q1 – AI vs ML
 
-# AIGP Mock Exam — 100 Question Bank
+**Question:**  
+In an enterprise context, which statement best captures the relationship between Artificial Intelligence (AI) and Machine Learning (ML)?
 
-## Q1
-**What does 'AI' stand for?**
+A. ML is a set of business rules, while AI is any software that uses data.  
+B. AI is a broad goal of creating systems that exhibit intelligent behavior, and ML is one family of techniques used to achieve that behavior.  
+C. AI refers only to systems that pass the Turing Test, and ML refers to all other automated systems.  
+D. ML and AI are interchangeable terms and mean the same thing.
 
-- A. Automated Intelligence
-- B. Artificial Intelligence
-- C. Advanced Interface
-- D. Algorithmic Integration
+**Correct answer:** B  
 
----
-
-## Q2
-**What is 'Machine Learning'?**
-
-- A. Teaching machines to learn human languages.
-- B. A subset of AI that enables systems to learn and improve from experience without being explicitly programmed.
-- C. The process of machines learning to walk.
-- D. A way to make computers run faster.
+**Reasoning:**  
+AI is a broad concept focused on systems that perform tasks requiring human-like intelligence. ML is a subset of AI that learns patterns from data to support that goal. Options C and D misstate the relationship, and A confuses ML with rule-based systems.
 
 ---
 
-## Q3
-**What is a 'Neural Network'?**
+## Q2 – Machine Learning definition nuance
 
-- A. A network of human brains.
-- B. A computer system modeled after the human brain that is used to recognize patterns.
-- C. A network of computers connected together.
-- D. A type of internet connection.
+**Question:**  
+Which definition most accurately reflects modern usage of the term “machine learning” in industry practice?
 
----
+A. Writing explicit rules so a program can mimic expert decisions.  
+B. Designing systems that infer patterns from data and improve performance on a task with experience.  
+C. Any use of statistics in data analysis.  
+D. Training a model once on historical data and never updating it.
 
-## Q4
-**What is 'Deep Learning'?**
+**Correct answer:** B  
 
-- A. Learning about the ocean.
-- B. A subset of machine learning that uses many-layered neural networks to analyze data.
-- C. A way to make computers think deeper thoughts.
-- D. Learning programming languages.
+**Reasoning:**  
+ML emphasizes algorithms that learn from data and improve with experience. A describes expert systems, C is generic statistics, and D contradicts the idea of ongoing learning and adaptation.
 
 ---
 
-## Q5
-**What is 'Natural Language Processing' (NLP)?**
+## Q3 – Neural networks vs traditional models
 
-- A. Teaching computers to speak naturally.
-- B. The ability of a computer to understand, interpret, and generate human language.
-- C. A way to process natural resources using AI.
-- D. A type of human language learning program.
+**Question:**  
+Compared to traditional linear models, which feature best characterizes artificial neural networks?
 
----
+A. They always require less data and compute than linear models.  
+B. They can approximate highly non-linear relationships by composing many simple units and layers.  
+C. They can only be applied to image data and not tabular data.  
+D. They eliminate the need for any data preprocessing.
 
-## Q6
-**What is a 'Large Language Model' (LLM)?**
+**Correct answer:** B  
 
-- A. A very large book about language.
-- B. An AI system trained on vast amounts of text data to understand and generate human-like text.
-- C. A language learning app.
-- D. A large database of languages.
+**Reasoning:**  
+Neural networks combine many simple units into layers to capture complex non-linear patterns. They often require more data and compute, work on many data types, and still benefit from preprocessing, so A, C, and D are incorrect.
 
 ---
 
-## Q7
-**What is 'Generative AI'?**
+## Q4 – Deep learning vs “shallow” networks
 
-- A. AI that generates electricity.
-- B. AI that can create new content, such as text, images, audio, and video.
-- C. AI that generates reports.
-- D. AI that generates code only.
+**Question:**  
+What primarily distinguishes *deep learning* from other neural network approaches?
 
----
+A. Deep learning models always use image data, while other networks do not.  
+B. Deep learning refers to neural networks with multiple hidden layers that can learn hierarchical feature representations.  
+C. Deep learning models do not require any labeled data.  
+D. Deep learning models are only deployed on specialized hardware.
 
-## Q8
-**What is 'AI Bias'?**
+**Correct answer:** B  
 
-- A. When an AI system prefers one programming language over another.
-- B. Systematic and unfair discrimination in AI outputs, often reflecting biases present in training data.
-- C. When an AI system is programmed to favor certain colors.
-- D. When an AI system works too slowly.
+**Reasoning:**  
+“Deep” refers to depth in layers: stacking many hidden layers allows hierarchical feature learning. Domains (A), label requirements (C), and deployment hardware (D) are not defining characteristics.
 
 ---
 
-## Q9
-**What is 'Explainability' in AI?**
+## Q5 – NLP beyond simple text processing
 
-- A. The ability to explain how to use an AI system.
-- B. The ability to understand and explain how an AI system reaches its conclusions.
-- C. The ability for AI to explain itself to other AI systems.
-- D. The documentation provided with an AI system.
+**Question:**  
+Which example best illustrates a modern Natural Language Processing (NLP) task rather than generic text processing?
 
----
+A. Counting how many times a word appears in a document.  
+B. Converting a text file from one encoding to another.  
+C. Automatically classifying customer emails into intents such as “billing issue” or “technical support.”  
+D. Compressing text files to save disk space.
 
-## Q10
-**What is a 'Training Dataset'?**
+**Correct answer:** C  
 
-- A. A collection of exercise routines for athletes.
-- B. The collection of data used to teach a machine learning model.
-- C. A dataset that contains training schedules.
-- D. A database of sports statistics.
+**Reasoning:**  
+NLP focuses on understanding and generating human language; intent classification from free-form text is a typical NLP task. The other options are text operations without language understanding.
 
 ---
 
-## Q11
-**What is 'Overfitting' in machine learning?**
+## Q6 – Large language model properties
 
-- A. When a model is too large for its purpose.
-- B. When a model learns the training data too well, including its noise, and performs poorly on new data.
-- C. When a model is trained for too long.
-- D. When a model uses too much computing power.
+**Question:**  
+Which property is *most* characteristic of a large language model (LLM) compared with earlier NLP systems?
 
----
+A. It relies exclusively on manually designed grammar rules for each language.  
+B. It is trained end-to-end on massive text corpora to predict the next token, enabling it to generalize to many tasks via prompting.  
+C. It can only perform the single task it was explicitly fine-tuned for.  
+D. It requires labeled intent data for every downstream use case.
 
-## Q12
-**What is 'Supervised Learning'?**
+**Correct answer:** B  
 
-- A. Learning under the supervision of a teacher.
-- B. A type of machine learning where the model is trained on labeled data.
-- C. A learning model that requires constant supervision.
-- D. A type of AI that monitors user activity.
+**Reasoning:**  
+LLMs use self-supervised objectives like next-token prediction over large text corpora and can handle many tasks via prompting. Rule-based grammars (A) and strict task-specific labeling (D) describe older paradigms, while C ignores broad task generalization.
 
 ---
 
-## Q13
-**What is 'Unsupervised Learning'?**
+## Q7 – Generative AI vs discriminative AI
 
-- A. Learning without any guidance or structure.
-- B. A type of machine learning where the model finds patterns in unlabeled data.
-- C. A learning model that works without electricity.
-- D. A type of AI that operates without rules.
+**Question:**  
+Which description best contrasts generative AI models with discriminative models?
 
----
+A. Generative models only generate labels, while discriminative models only generate raw data.  
+B. Generative models learn to model the joint distribution of inputs and outputs to produce new samples, while discriminative models focus on predicting outputs given inputs.  
+C. Generative models require no training data, while discriminative models do.  
+D. There is no meaningful distinction; the terms are synonymous.
 
-## Q14
-**What is 'Reinforcement Learning'?**
+**Correct answer:** B  
 
-- A. Training a model by giving it positive reinforcement.
-- B. A type of machine learning where an agent learns to make decisions by interacting with an environment and receiving rewards or penalties.
-- C. A learning model that is reinforced with more data.
-- D. A way to make AI systems more powerful.
+**Reasoning:**  
+Generative models approximate how data is distributed and can sample new data points; discriminative models learn boundaries for tasks like classification. A, C, and D misdescribe or deny this distinction.
 
 ---
 
-## Q15
-**What is a 'Foundation Model'?**
+## Q8 – AI bias vs data bias
 
-- A. The base model used to build a house.
-- B. A large AI model trained on broad data that can be adapted for a wide range of tasks.
-- C. The first AI model ever created.
-- D. A model that provides the foundation for a company's IT infrastructure.
+**Question:**  
+An AI system for loan approvals shows systematically lower approval rates for one demographic group, even when controlling for income and credit score. Which explanation most accurately reflects the notion of *AI bias*?
 
----
+A. The AI is malfunctioning due to hardware failure.  
+B. The training data or model design encodes historical or structural biases, leading to unfairly different outcomes for certain groups.  
+C. Users are entering incorrect information into the system.  
+D. The system is correctly following regulations that explicitly forbid lending to that group.
 
-## Q16
-**What is 'Prompt Engineering'?**
+**Correct answer:** B  
 
-- A. Engineering a new type of prompt.
-- B. The practice of designing and optimizing text inputs to get the best outputs from AI models.
-- C. A way to speed up AI systems.
-- D. Creating prompts for human employees.
+**Reasoning:**  
+AI bias generally arises when data, labels, or model design encode inequities that drive systematic disparities. Hardware issues, user input errors, or mandated discrimination are different problems.
 
 ---
 
-## Q17
-**What is 'Hallucination' in the context of AI?**
+## Q9 – Explainability vs “documentation”
 
-- A. When an AI system sees images that aren't there.
-- B. When an AI model generates false or nonsensical information with apparent confidence.
-- C. When an AI system malfunctions due to a bug.
-- D. When an AI system creates art or music.
+**Question:**  
+A financial institution deploys a credit scoring model and regulators ask, “Why was this applicant denied?” Which practice aligns most closely with *AI explainability* requirements?
 
----
+A. Sharing only the model’s source code under NDA.  
+B. Providing human-readable reasons, such as key features and their contributions, that clarify how the model produced this specific decision.  
+C. Responding that the model is proprietary and cannot be explained.  
+D. Publishing a high-level marketing brochure about the benefits of AI.
 
-## Q18
-**What is the 'EU AI Act'?**
+**Correct answer:** B  
 
-- A. A law about artificial intelligence in the United States.
-- B. A comprehensive regulatory framework for artificial intelligence in the European Union, classifying AI systems by risk.
-- C. A European trade agreement related to technology.
-- D. A set of guidelines for AI development in Europe.
+**Reasoning:**  
+Explainability aims to make decisions understandable, often via feature-level or local explanations. Code access (A), refusal to explain (C), and generic marketing material (D) do not meet that goal.
 
 ---
 
-## Q19
-**Under the EU AI Act, what is considered a 'High-Risk' AI system?**
+## Q10 – Training vs test data
 
-- A. An AI system that could explode.
-- B. An AI system used in critical areas such as healthcare, employment, education, and law enforcement that could significantly impact people's lives.
-- C. An AI system that is very expensive.
-- D. An AI system that is difficult to use.
+**Question:**  
+Why is it a bad practice to include test data in the training dataset for a machine learning model?
+
+A. It makes the model slower at inference time.  
+B. It prevents the model from converging during optimization.  
+C. It leaks information about the evaluation set, causing overly optimistic performance estimates and hiding how the model will generalize to unseen data.  
+D. It forces the model to memorize all training examples perfectly.
+
+**Correct answer:** C  
+
+**Reasoning:**  
+Test data should represent unseen real-world cases. If it is used in training, evaluation metrics are inflated and no longer measure true generalization performance, which can mislead deployment decisions.
+
+---
+
+## Q11 – Overfitting
+
+**Question:**  
+A fraud detection model performs almost perfectly on historical training data but misses many new fraud patterns after deployment. Which situation best describes *overfitting*?
+
+A. The model has too few parameters and cannot capture the structure of the data.  
+B. The model learned idiosyncratic noise and specifics of the training set, harming its ability to generalize to new data.  
+C. The model was trained on too much diverse data and became unstable.  
+D. The model was evaluated only with cross-validation and not with a test set.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Overfitting occurs when a model captures noise and quirks of the training data rather than underlying patterns, leading to poor performance on unseen data. High training performance but degraded real-world performance matches this description.
 
 ---
 
-## Q20
-**What is 'GDPR'?**
+## Q12 – Supervised learning nuance
 
-- A. A type of computer graphics standard.
-- B. The General Data Protection Regulation, a European Union law on data protection and privacy.
-- C. A global data processing requirement.
-- D. A government database protection registry.
+**Question:**  
+Which scenario is the clearest example of *supervised learning* in a business context?
+
+A. Clustering customer transactions to find unknown behavior segments.  
+B. Predicting whether a loan application will be approved using historical applications labeled as “approved” or “denied.”  
+C. Using an LLM to generate draft marketing copy without any labels.  
+D. Running a rules engine that rejects applications below a fixed credit score.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Supervised learning uses labeled examples mapping inputs to known outputs, such as historical applications labeled approved/denied. Clustering is unsupervised, generation without labels is not standard supervised learning, and a rules engine is not learning from labels.
 
 ---
+
+## Q13 – Unsupervised learning nuance
+
+**Question:**  
+A data science team wants to discover previously unknown customer segments based only on purchase patterns and demographics, without predefined segment labels. Which learning paradigm is most appropriate?
+
+A. Supervised learning.  
+B. Unsupervised learning.  
+C. Reinforcement learning.  
+D. Semi-supervised learning.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Unsupervised learning is used when there are no labels and the goal is to find structure or patterns in the data, such as clusters or latent groups. Customer segmentation from unlabeled behavior is a classic unsupervised use case.
+
+---
+
+## Q14 – Reinforcement learning detail
+
+**Question:**  
+Which statement best captures the core idea of reinforcement learning?
+
+A. The model passively fits a function from labeled inputs to outputs.  
+B. An agent interacts with an environment, taking actions and learning a policy that maximizes cumulative reward over time.  
+C. The model clusters data points to discover underlying groups.  
+D. The model learns from a static dataset without any feedback.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Reinforcement learning centers on an agent–environment loop, where actions yield rewards and the agent learns a policy to maximize long-term return. The other options describe supervised, unsupervised, or static learning setups.
+
+---
+
+## Q15 – Foundation model characteristics
+
+**Question:**  
+Which aspect most distinguishes a *foundation model* from a traditional task-specific model?
+
+A. It must be open source and free to use.  
+B. It is trained on broad, large-scale data and then adapted for many downstream tasks, often via fine-tuning or prompting.  
+C. It can only be used for text generation tasks.  
+D. It does not require any governance because it is pre-trained.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Foundation models are large, general-purpose models pre-trained on broad data and reused across many tasks. Openness, modality restrictions, and lack of governance are not defining properties.
+
+---
+
+## Q16 – Prompt engineering depth
+
+**Question:**  
+Which practice is the best example of *prompt engineering* for a large language model used in an enterprise knowledge assistant?
+
+A. Rewriting the model’s source code to improve performance.  
+B. Carefully structuring instructions, context, and examples in the input so the model produces consistent, policy-compliant answers.  
+C. Increasing GPU memory to allow larger batch sizes.  
+D. Randomly varying prompts to avoid repetition.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+Prompt engineering focuses on crafting inputs—instructions, constraints, examples, and context—to steer model behavior. Changing code or infrastructure is outside prompt engineering, and random variation does not reliably improve consistency or compliance.
+
+---
+
+## Q17 – Hallucination risk
+
+**Question:**  
+A legal assistant chatbot confidently cites a non-existent court case with a plausible-sounding name and reference. What is the best description of this failure mode?
+
+A. Data leakage.  
+B. Concept drift.  
+C. Model hallucination.  
+D. Underfitting.
+
+**Correct answer:** C  
+
+**Reasoning:**  
+Hallucination occurs when a model produces fluent but factually incorrect or fabricated content. Data leakage, drift, and underfitting are different issues related to data misuse, changing distributions, or insufficient learning.
+
+---
+
+## Q18 – EU AI Act risk tiers
+
+**Question:**  
+Under the EU AI Act, which AI use case is *most likely* to be classified in a higher risk category requiring strict controls?
+
+A. A generative model used to create abstract art wallpapers.  
+B. A chatbot suggesting movie recommendations for a streaming service.  
+C. An AI system used to screen job applicants for hiring decisions across the EU.  
+D. A personal note-taking assistant that summarizes a user’s own documents locally.
+
+**Correct answer:** C  
+
+**Reasoning:**  
+The EU AI Act treats systems that significantly affect individuals’ rights and opportunities (e.g., employment, education, law enforcement) as high-risk, subject to stringent requirements. Entertainment and personal productivity use cases are typically lower risk.
+
+---
+
+## Q19 – High-risk AI obligations
+
+**Question:**  
+For an AI system classified as *high-risk* under the EU AI Act (for example, an automated hiring tool), which obligation is most relevant?
+
+A. No documentation is required if the model is accurate.  
+B. The provider must implement risk management, data quality controls, technical documentation, human oversight, and post-market monitoring.  
+C. The system is banned and cannot be deployed in the EU.  
+D. Only a public transparency notice is required.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+High-risk systems are permitted but subject to stringent obligations, including risk management, quality management, documentation, human oversight, and monitoring. Only certain unacceptable-risk systems are prohibited, and transparency alone is insufficient.
+
+---
+
+## Q20 – GDPR and AI training data
+
+**Question:**  
+A company wants to train a recommendation model on EU customers’ clickstream data that is linked to identifiable user profiles. Under GDPR, which practice is most aligned with compliance expectations?
+
+A. Collecting all available behavioral data by default without informing users.  
+B. Processing personal data based on a valid lawful basis (such as consent or legitimate interest), honoring user rights (access, erasure), and applying data minimization and purpose limitation.  
+C. Storing personal data indefinitely as long as it improves model accuracy.  
+D. Treating any data used for AI training as exempt from GDPR.
+
+**Correct answer:** B  
+
+**Reasoning:**  
+GDPR requires a lawful basis for processing, transparency, respect for data subject rights, and adherence to principles like data minimization and purpose limitation. Indefinite storage, non-transparency, or exempting AI training from GDPR are non-compliant.
+
 
 ## Q21
 **Under GDPR, what is a 'Data Subject'?**
