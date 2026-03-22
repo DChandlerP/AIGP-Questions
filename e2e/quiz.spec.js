@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('completes the entire quiz successfully', async ({ page }) => {
-  // Give the test 2 minutes to complete all 70+ questions
-  test.setTimeout(120000);
+  // Give the test 5 minutes to complete all 100+ questions
+  test.setTimeout(300000);
 
   // Navigate to the app (Playwright will wait for Vite to be ready)
   await page.goto('/');
