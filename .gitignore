@@ -41,3 +41,10 @@ eslint.config.js
 tsconfig.node.json
 vite.config.js.timestamp-*
 *.tsbuildinfo
+
+# Testing outputs
+coverage/
+playwright-report/
+playwright/.cache/
+test-results/
+blob-report/

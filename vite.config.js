@@ -5,4 +5,14 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  test: {
+    exclude: [
+      'node_modules', 
+      'dist', 
+      '.idea', 
+      '.git', 
+      '.cache',
+      'e2e/**'
+    ]
+  }
 })
