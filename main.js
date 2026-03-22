@@ -1,4 +1,5 @@
 import quizData from './aigp_questions.json';
+import { formatTime } from './utils.js';
 
 const app = document.getElementById('app');
 
@@ -66,12 +67,6 @@ function startQuiz(questions) {
         renderResults("Time's up!");
       }
     }, 1000);
-  }
-
-  function formatTime(totalSeconds) {
-    const m = Math.floor(Math.abs(totalSeconds) / 60);
-    const s = Math.abs(totalSeconds) % 60;
-    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
   function updateTimerDisplay() {

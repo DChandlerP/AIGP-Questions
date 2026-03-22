@@ -4,7 +4,7 @@
   "description": "**Question:**   In an enterprise context, which statement best captures the relationship between Artificial Intelligence (AI) and Machine Learning (ML)?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -23,7 +23,9 @@
   "homepage": "https://github.com/DChandlerP/AIGP-Questions#readme",
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "jsdom": "^29.0.1",
     "tailwindcss": "^4.2.2",
-    "vite": "^8.0.1"
+    "vite": "^8.0.1",
+    "vitest": "^4.1.0"
   }
 }
